@@ -4,6 +4,7 @@
         <list-item
         :item='item'
         class="item"
+        v-on:itemchanged="$emit('reloadlist')"
         ></list-item>
     </div>
   </div>
@@ -28,6 +29,6 @@ export default {
         margin-top: 5px;
         border-radius: 10px;
         color: black;
- 
+
     }
 </style>
