@@ -1891,7 +1891,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -6637,7 +6636,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.todolistContainer[data-v-27d9b80a]{\n    width: 350px;\n    margin: auto;\n    color: white;\n}\n.heading[data-v-27d9b80a]{\n    background-color: #34495e;\n    padding: 20px;\n    border-radius: 30px;\n    margin: 20px 0;\n}\n#title[data-v-27d9b80a]{\n    text-align: center;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.todolistContainer[data-v-27d9b80a]{\n    width: 350px;\n    margin: auto;\n    color: white;\n}\n.heading[data-v-27d9b80a]{\n    background-color: #34495e;\n    padding: 20px;\n    margin: 20px 0;\n}\n#title[data-v-27d9b80a]{\n    text-align: center;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -6661,7 +6660,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.completed[data-v-1d1939b8]{\n    text-decoration: line-through;\n    color: gray;\n}\n.itemText[data-v-1d1939b8]{\n    width: 100%;\n    margin-left: 20px;\n    font-size: 20px;\n}\n.item[data-v-1d1939b8]{\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n.trashcan[data-v-1d1939b8]{\n    background: #bdc3c7;\n    border: 0;\n    outline: none;\n    color: #df3131;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.completed[data-v-1d1939b8]{\n    text-decoration: line-through;\n    color: gray;\n}\n.itemText[data-v-1d1939b8]{\n    width: 100%;\n    margin-left: 20px;\n    font-size: 20px;\n}\n.item[data-v-1d1939b8]{\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n.trashcan[data-v-1d1939b8]{\n    background: transparent;\n    border: 0;\n    outline: none;\n    color: #df3131;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -6685,7 +6684,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.item[data-v-1e30e04a]{\n    background: #bdc3c7;\n    padding: 5px;\n    margin-top: 5px;\n    border-radius: 10px;\n    color: black;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.item[data-v-1e30e04a]{\n    background: #34495e;\n    padding: 5px;\n    margin-top: 5px;\n    color: white;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -34872,10 +34871,10 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
 
 /***/ }),
 
-/***/ "./resources/css/app.css":
-/*!*******************************!*\
-  !*** ./resources/css/app.css ***!
-  \*******************************/
+/***/ "./resources/sass/app.scss":
+/*!*********************************!*\
+  !*** ./resources/sass/app.scss ***!
+  \*********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -38594,43 +38593,38 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c(
-      "div",
-      { staticClass: "addItem" },
-      [
-        _c("input", {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.item.name,
-              expression: "item.name"
-            }
-          ],
-          attrs: { type: "text" },
-          domProps: { value: _vm.item.name },
-          on: {
-            input: function($event) {
-              if ($event.target.composing) {
-                return
-              }
-              _vm.$set(_vm.item, "name", $event.target.value)
-            }
+    _c("div", { staticClass: "addItem" }, [
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.item.name,
+            expression: "item.name"
           }
-        }),
-        _vm._v(" "),
-        _c("font-awesome-icon", {
-          class: [_vm.item.name ? "active" : "inactive", "plus"],
-          attrs: { icon: "plus-square" },
-          on: {
-            click: function($event) {
-              return _vm.addItem()
+        ],
+        attrs: { type: "text" },
+        domProps: { value: _vm.item.name },
+        on: {
+          input: function($event) {
+            if ($event.target.composing) {
+              return
             }
+            _vm.$set(_vm.item, "name", $event.target.value)
           }
-        })
-      ],
-      1
-    )
+        }
+      }),
+      _vm._v(" "),
+      _c("i", {
+        staticClass: "fas fa-plus",
+        class: [_vm.item.name ? "active" : "inactive", "plus"],
+        on: {
+          click: function($event) {
+            return _vm.addItem()
+          }
+        }
+      })
+    ])
   ])
 }
 var staticRenderFns = []
@@ -38772,8 +38766,7 @@ var render = function() {
           }
         }
       },
-      [_c("font-awesome-icon", { attrs: { icon: "trash" } })],
-      1
+      [_c("i", { staticClass: "fas fa-trash" })]
     )
   ])
 }
@@ -51171,7 +51164,7 @@ Vue.compile = compileToFunctions;
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
 /******/ 	__webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/js/app.js")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/css/app.css")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/sass/app.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

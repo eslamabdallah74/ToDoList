@@ -24,11 +24,9 @@ export default {
 
 <style scoped>
     .item{
-        background: #bdc3c7;
+        background: #34495e;
         padding: 5px;
         margin-top: 5px;
-        border-radius: 10px;
-        color: black;
-
+        color: white;
     }
 </style>

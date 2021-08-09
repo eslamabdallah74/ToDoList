@@ -56,7 +56,6 @@ export default {
     .heading{
         background-color: #34495e;
         padding: 20px;
-        border-radius: 30px;
         margin: 20px 0;
     }
     #title{

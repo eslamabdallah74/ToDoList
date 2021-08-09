@@ -3,7 +3,7 @@
     <input type="checkbox" @change="updateCheck()" v-model="item.completed">
     <span :class="[item.completed ? 'completed' : '' , 'itemText']">{{item.name}}</span>
     <button @click="removItem()" class="trashcan">
-        <font-awesome-icon icon="trash" />
+       <i class="fas fa-trash"></i>
     </button>
   </div>
 </template>
@@ -59,7 +59,7 @@ export default {
         align-items: center;
     }
     .trashcan{
-        background: #bdc3c7;
+        background: transparent;
         border: 0;
         outline: none;
         color: #df3131;

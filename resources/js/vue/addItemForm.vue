@@ -2,10 +2,9 @@
   <div>
     <div class="addItem">
         <input type="text" v-model="item.name" />
-        <font-awesome-icon
+        <i class="fas fa-plus"
         @click="addItem()"
-         icon='plus-square'
-        :class="[item.name ? 'active' : 'inactive' , 'plus']" />
+       :class="[item.name ? 'active' : 'inactive' , 'plus']"></i>
     </div>
   </div>
 </template>
